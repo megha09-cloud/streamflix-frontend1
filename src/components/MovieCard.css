@@ -1,0 +1,90 @@
+.sf-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 200px;
+  aspect-ratio: 2 / 3;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: visible;
+}
+
+.sf-card__poster-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #1a1a1a;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+  transform-origin: center;
+}
+
+.sf-card:hover .sf-card__poster-wrap,
+.sf-card:focus-visible .sf-card__poster-wrap {
+  transform: scale(1.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 0 24px rgba(229, 9, 20, 0.25);
+  z-index: 5;
+}
+
+.sf-card__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sf-card__fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+  color: #ccc;
+  background: linear-gradient(135deg, #232323, #141414);
+}
+
+.sf-card__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 10px 8px;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.9));
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  text-align: left;
+}
+
+.sf-card:hover .sf-card__overlay,
+.sf-card:focus-visible .sf-card__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sf-card__title {
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sf-card__rating {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: #46d369;
+}
+
+@media (max-width: 700px) {
+  .sf-card { width: 128px; }
+}

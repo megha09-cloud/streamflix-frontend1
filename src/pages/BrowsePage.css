@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap");
+
+.sf-browse {
+  background: #0b0b0d;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  padding-bottom: 60px;
+}
+
+.sf-browse__rows {
+  margin-top: -90px;
+  position: relative;
+  z-index: 2;
+}
+
+.sf-browse__notice {
+  padding: 140px 48px 40px;
+  max-width: 640px;
+}
+
+.sf-browse__notice h2 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.sf-browse__notice p {
+  color: #b3b3b3;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.sf-browse__notice code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.sf-browse__notice a {
+  color: #e50914;
+}
+
+.sf-browse__loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sf-browse__loading-bar {
+  width: 160px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sf-browse__loading-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: #e50914;
+  animation: sf-loading-slide 1s ease-in-out infinite;
+}
+
+@keyframes sf-loading-slide {
+  0% { left: -40%; }
+  100% { left: 100%; }
+}
+
+@media (max-width: 700px) {
+  .sf-browse__rows { margin-top: -60px; }
+  .sf-browse__notice { padding: 110px 20px 30px; }
+}

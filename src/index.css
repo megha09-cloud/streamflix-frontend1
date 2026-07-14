@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #141414;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* hide scrollbar for the trending carousel but keep it scrollable */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* accordion answer link style used inside FAQ */
+.faq-link {
+  color: #0071eb;
+  text-decoration: none;
+}
+.faq-link:hover {
+  text-decoration: underline;
+}
+.tmdb-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  
+}
+.tmdb-scrollbar::-webkit-scrollbar-track {
+  background:transparent;
+
+}
+.tmdb-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.4);
+  border-radius: 4px;
+}
+.tmdb-scrollbar::-webkit-scrollbar-thumb-hover {
+  background:rgb(255,255,255,0.6);
+}
