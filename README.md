@@ -8,8 +8,7 @@ The frontend is developed using **React** and **Vite**, providing a modern, resp
 
 ## 🚀 Live Demo
 
-🌐 https://streamflix-inn.netlify.app
-
+🌐https://stream-inn.netlify.app/
 ---
 
 ## 📌 Project Overview
